@@ -23,14 +23,14 @@ export default class DailyWeather extends Component {
     }
 
     async componentDidMount() {
-        await this._getThePropsData();
+        // await this._getThePropsData();
     }
 
-   /* componentDidUpdate=async (prevProps,prevState)=>{
+    componentDidUpdate=async (prevProps,prevState)=>{
         if(this.props !== prevProps){
             await this._getThePropsData();
         }
-    }*/
+    }
 
     _getThePropsData = () => {
         let theData = this.props && this.props.data;
@@ -52,7 +52,6 @@ export default class DailyWeather extends Component {
         let weather = {};
 
         result && result.map(item => {
-            console.log('=>>>>>>>lllll>>>>', item)
             dayArray.push(moment(item.dt * 1000).format("ddd"))
 
             var maxValue = Math.floor(item.temp.max) && Math.floor(item.temp.max)
