@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {ScrollView, ImageBackground, View, Text, Dimensions, Image, TextInput} from "react-native";
-import WeatherSearch from "./src/screens/WeatherSearch";
 import DailyWeather from "./src/screens/DailyWeather";
 import TodayWeather from "./src/screens/TodayWeather";
 import {API_KEY} from "./config";
